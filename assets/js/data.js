@@ -43,7 +43,7 @@ const projectGallery = [
         image: "/movie__app.png",
         tags: ['HTML', 'CSS', 'JS', 'API'],
         gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/movie__app",
-        projectUrl: "/portfolio/movie__url",
+        projectUrl: "/portfolio/movie__app",
         gradient: 'third'
     }, {
         name: "Youtube Home UI",
