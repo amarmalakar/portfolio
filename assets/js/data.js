@@ -29,28 +29,28 @@ const projectGallery = [
         image: "todo.png",
         tags: ['HTML', 'CSS', 'JS', 'localstorage'],
         gitUrl: "#",
-        projectUrl: "/todo",
+        projectUrl: "/portfolio/todo",
         gradient: 'first'
     }, {
         name: "Quiz App",
         image: "quiz.png",
         tags: ['HTML', 'CSS', 'JS'],
         gitUrl: "",
-        projectUrl: "/quiz__app",
+        projectUrl: "/portfolio/quiz__app",
         gradient: 'second'
     }, {
         name: "Movie App",
         image: "/movie__app.png",
         tags: ['HTML', 'CSS', 'JS', 'API'],
         gitUrl: "#",
-        projectUrl: "/movie__url",
+        projectUrl: "/portfolio/movie__url",
         gradient: 'third'
     }, {
         name: "Youtube Home UI",
         image: "/youtube_ui.png",
         tags: ['HTML', 'CSS', 'JS', 'API'],
         gitUrl: "#",
-        projectUrl: "/youtube_home",
+        projectUrl: "/portfolio/youtube_home",
         gradient: 'fourth'
     }, {
         name: "Blog App (UI)",
@@ -64,13 +64,13 @@ const projectGallery = [
 const projectLink = [
     {
         txt: "Ambulance Registration Form",
-        url: "/form/ambulance.html"
+        url: "/portfolio/form/ambulance.html"
     }, {
         txt: "Subscribe Form",
-        url: "/form/NewsLetter.html"
+        url: "/portfolio/form/NewsLetter.html"
     }, {
         txt: "Category Page Layout",
-        url: "/category_page"
+        url: "/portfolio/category_page"
     }
 ]
 
