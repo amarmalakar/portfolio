@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Form</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+        *,
+        *::after,
+        *::before {margin: 0;padding: 0;box-sizing: border-box;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        body {margin: 0 15px;}
+        h1, h2, h3, label {font-weight: 400;}
+        p, input {font-weight: 300;}
+        input[type=submit], button {cursor: pointer;}
+        hr {border: none;border-bottom: 1px solid rgba(39, 60, 117, 1);}
+        .wrapper {max-width: 936px;margin: 15px auto;}
+        .form_wrap {
+            border: 5px solid rgba(39, 60, 117, 1);
+            background-color: rgba(39, 60, 117, .1);
+            padding: 15px;
+            margin-top: 30px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form__container {padding: 15px 0;}
+        .input {margin: 15px 0;}
+        .input label {display: block;font-size: 13px;}
+        .input input,
+        .input select {
+            width: 100%;
+            margin-top: 5px;
+            padding: 4px 8px;
+        }
+        input[type=submit],
+        button {
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+            width: 150px;
+            text-align: center;
+            background-color: rgba(39, 60, 117, 1);
+            color: #fff;
+            font-weight: 500;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+        button {padding: 5px;}
+        p.check__ability__btn {
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+            width: 150px;
+            text-align: center;
+            background-color: rgba(39, 60, 117, 1);
+            color: #fff;
+            font-weight: 500;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .grid {display: grid;grid-gap: 15px;}
+        .grid-2 {grid-template-columns: repeat(2, 1fr);}
+        .grid-3 {grid-template-columns: repeat(3, 1fr);}
+
+        .messageBox {
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            position: fixed;
+            top: 10px;
+            right: 0px;
+            font-weight: 500;
+            display: none;
+        }
+        .messageBox.primary {background-color: #2ecc71;}
+        .messageBox.alert   {background-color: #d63031;}
+
+        .input__status {
+            color: #f00;
+            font-size: 12px;
+            font-weight: 500;
+            font-style: italic;
+            display: none;
+        }
+
+        #mainFormContainer,
+        #districInput,
+        #cityInput {display: none;}
+        #submitFormBtn {cursor: not-allowed;opacity: 0.5;}
+    </style>
+</head>
+<body>
+    
+<main class="wrapper">
+    <h1>Form for request an Ambulance</h1>
+
+    <div class="form_wrap">
+        <div class="messageBox"></div>
+
+        <form action="" onsubmit="return validate()">
+            <h3>Check Ability</h3>
+            <div class="grid grid-2">
+                <div class="input">
+                    <label for="date">Enter Date To Get Ambulance: </label>
+                    <input type="date" name="" id="dateToGet">
+                </div>
+            </div>
+            <!-- <button>Check Ability</button> -->
+            <p class="check__ability__btn" onclick="checkAbility()">Check Ability</p>
+            <br><br>
+            <hr>
+
+            <div class="form__container" id="mainFormContainer">
+                <h3>Enter Patient Name: </h3>
+                <div class="form__container">
+                    <div class="grid grid-3">
+                        <div class="input">
+                            <label for="f_name">First Name:</label>
+                            <input type="text" name="f_name" id="f_name" oninput="letter_status('f__name_status', this)">
+                            <span class="input__status" id="f__name_status">min. 3 letter is required **</span>
+                        </div>
+                        <div class="input">
+                            <label for="m_name">Middle Name:</label>
+                            <input type="text" name="m_name" id="m_name" oninput="letter_status('m__name_status', this)">
+                            <span class="input__status" id="m__name_status">min. 3 letter is required **</span>
+                        </div>
+                        <div class="input">
+                            <label for="l_name">Last Name:</label>
+                            <input type="text" name="l_name" id="l_name" oninput="letter_status('l__name_status', this)">
+                            <span class="input__status" id="l__name_status">min. 3 letter is required **</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form__container">
+                    <h3>Contact Information:</h3>
+                    <div class="grid grid-3">
+                        <div class="input">
+                            <label for="ph_1">1st Phone No:</label>
+                            <input type="number" name="ph_1" id="ph_1">
+                            <span class="input__status" id="f__phone">Enter valid phone number **</span>
+                        </div>
+                        <div class="input">
+                            <label for="ph_2">2nd Phone No:</label>
+                            <input type="number" name="ph_2" id="ph_2">
+                            <span class="input__status" id="l__phone">Enter valid phone number **</span>
+                        </div>
+                        <div class="input">
+                            <label for="email_address">Email:</label>
+                            <input type="text" name="email_address" id="email_address">
+                            <span class="input__status" id="email_add">Enter valid email **</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form__container">
+                    <h3>Pick up Address: </h3>
+                    <div class="grid grid-3">
+                        <div class="input">
+                            <label for="state">Select State: </label>
+                            <select name="state" id="state">
+                                <option>Select State</option>
+                            </select>
+                        </div>
+                        <div class="input" id="districInput">
+                            <label for="distric">Select Distric: </label>
+                            <select name="distric" id="distric"></select>
+                        </div>
+                        <div class="input" id="cityInput">
+                            <label for="city">Select City: </label>
+                            <select name="city" id="city"></select>
+                        </div>
+                    </div>
+                    <div class="grid grid-2">
+                        <div class="input">
+                            <label for="pinCode">PIN CODE:</label>
+                            <input type="text" name="pinCode" id="pinCode">
+                        </div>
+                        <div class="input">
+                            <label for="exactLocation">Exact Location:</label>
+                            <input type="text" name="exactLocation" id="exactLocation" oninput="letter_status('exact__location_status', this)">
+                            <span class="input__status" id="exact__location_status">min. 3 letter is required **</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__container">
+                    <h3>Destination Address:</h3>
+                    <div class="grid grid-2">
+                        <div class="input">
+                            <label for="desCity">City:</label>
+                            <input type="text" name="desCity" id="desCity" oninput="letter_status('des__city_status', this)">
+                            <span class="input__status" id="des__city_status">min. 3 letter is required **</span>
+                        </div>
+                        <div class="input">
+                            <label for="desExactLocation">Exact Location:</label>
+                            <input type="text" name="desExactLocation" id="desExactLocation" oninput="letter_status('des__exact_status', this)">
+                            <span class="input__status" id="des__exact_status">min. 3 letter is required **</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="input">
+                        <p>
+                            <input type="checkbox" name="terms" id="terms" style="width: 20px;">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque consequuntur consequatur, facere illum quibusdam ipsam voluptas voluptatum consectetur, nulla ut quis voluptate nam! Saepe, quisquam sint dicta fuga sed fugiat.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="input">
+                    <input type="submit" value="Submit" id="submitFormBtn">
+                </div>
+            </div>
+        </form>
+
+    </div>
+</main>
+
+<script src="cityDB.js"></script>
+
+<script>
+
+"use strict"
+
+const date = new Date();
+
+const dateToGet = document.querySelector('#dateToGet');
+const submitFormBtn = document.querySelector('#submitFormBtn');
+const mainFormContainer = document.querySelector('#mainFormContainer');
+
+// Alert Message Box
+const message = (msg, msgType) => {
+    const messageBox = document.querySelector('.messageBox');
+    messageBox.innerHTML = msg;
+    messageBox.classList.add(msgType);
+    messageBox.style.display = 'block';
+
+    setTimeout(() => {
+        messageBox.innerHTML = '';
+        messageBox.classList.remove(msgType);
+        messageBox.style.display = 'none';
+    }, 3000);
+}
+
+const setDateInAbility = () => {
+    let currentYear = date.getFullYear();
+
+    let currentMonth = date.getMonth() + 1;
+    (currentMonth < 10) ? currentMonth = '0'+currentMonth : currentMonth = currentMonth;
+
+    let currentDate = date.getDate();
+    (currentDate < 10) ? currentDate = '0'+currentDate : currentDate = currentDate;
+
+    let todayDate = currentYear+'-'+currentMonth+'-'+currentDate;
+    dateToGet.setAttribute('min', todayDate)
+
+    // console.log( date.getDay() );
+}
+setDateInAbility();
+
+// Check Ambulance is aviliable or not
+const checkAbility = () => {
+    let newDate = new Date (dateToGet.value);
+
+    if (dateToGet.value == '') {
+        message('Please submit date when you want Ambulance', 'alert')
+        mainFormContainer.style.display = 'none';
+    } else if (newDate.getDay() == 0 || newDate.getDay() == 6) {
+        message(`SAT & SUN! We don't provide a service.`, 'alert')
+        mainFormContainer.style.display = 'none';
+    } else {
+        message(`Ambulance is available on ${dateToGet.value}`, 'primary')
+        mainFormContainer.style.display = 'block';
+    }
+}
+
+// Handlle Input Error
+const letter_status = (statId, inp) => {
+    let ids = document.getElementById(statId);
+    if (inp.value.length < 3) {
+        ids.style.display = 'block';
+    }
+    if (inp.value.length >= 3 || inp.value.length == 0) {
+        ids.style.display = 'none';
+    }
+}
+
+
+const f_name = document.getElementById('f_name');
+const ph_1 = document.getElementById('ph_1');
+const email_address = document.getElementById('email_address');
+const pinCode = document.getElementById('pinCode');
+const exactLocation = document.getElementById('exactLocation');
+const desCity = document.getElementById('desCity');
+const desExactLocation = document.getElementById('desExactLocation');
+const checkbox = document.getElementById('terms');
+
+const state = document.getElementById('state');
+const distric = document.getElementById('distric');
+const city = document.getElementById('city');
+
+/* set state */
+for (let i = 0; i < listOfState.length; i++) {
+    let options = `
+        <option id="${listOfState[i]}" value="${listOfState[i]}">
+            ${listOfState[i]}
+        </option>
+    `;
+    state.innerHTML += options;
+    // state.isDefaultNamespace.value = listOfDistric[1];
+}
+state.addEventListener('change', () => {
+    distric.innerHTML = `<option>Select Distric</option>`;
+    city.innerHTML = `<option>Select City</option>`;
+    listOfDistric.filter( (districData) => {
+        districInput.style.display = 'block';
+        let stateId = state.value;
+        if (districData.s__name === stateId) {
+            let options = `<option id="${districData.d__name}" value="${districData.d__name}">${districData.d__name}</option>`;
+            distric.innerHTML += options;
+        }
+    } )
+})
+distric.addEventListener('change', () => {
+    city.innerHTML = `<option>Select City</option>`;
+    listOfDistric.filter( (cityData) => {
+        cityInput.style.display = 'block';
+        if (cityData.d__name === distric.value) {
+            for (let i = 0; i < cityData.city.length; i++) {
+                let options = `<option id="${cityData.city[i]}" value="${cityData.city[i]}">${cityData.city[i]}</option>`;
+                city.innerHTML += options;
+            }
+        }
+    } )
+})
+
+/* checkbox */
+checkbox.addEventListener('click', () => {
+    if (checkbox.checked == false) {
+        submitFormBtn.style.cursor = 'not-allowed';
+        submitFormBtn.style.opacity = '0.5';
+    } else {
+        submitFormBtn.style.cursor = 'pointer';
+        submitFormBtn.style.opacity = '1';
+    }
+})
+
+let validEmailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const validate = () => {
+    if (f_name.value.length < 3) {
+        message('Please! enter patient name correctly', 'alert')
+        return false;
+    } else if (ph_1.value.length < 10) {
+        message('Enter phone no. correctly', 'alert')
+        return false;
+    } else if (email_address.value === '') {
+        message('Add a valid email', 'alert')
+        return false;
+    } else if (!email_address.value.match(validEmailRegEx)) {
+        message('Enter a valid email', 'alert')
+        return false;
+    } else if (
+        state.value == 'Select State' ||
+        distric.value == 'Select Distric' ||
+        city.value == 'Select City' ||
+        pinCode.value.length < 6 ||
+        exactLocation.value.length < 3
+    ) {
+        message('Enter pick up address correctly', 'alert')
+        return false;
+    } else if (
+        desCity.value.length < 3 ||
+        desExactLocation.value.length < 3
+    ) {
+        message('Enter Destination address correctly', 'alert')
+        return false;
+    } else {
+        message('Your Form Is Subbmited', 'primary')
+        return false;
+    }
+    return false;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube UI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- top navbar -->
+<div class="nav__bar">
+    <div class="nav__bar-left">
+        <a href="#" onclick="showNav()"><i class="material-icons">menu</i></a>
+        <img src="assets/logo.png" alt="">
+    </div>
+    <div class="nav__bar-right">
+        <div class="navbar__search__section">
+            <div class="navbar__search__wrapper">
+                <form action="#">
+                    <input type="text" placeholder="Search">
+                    <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+                </form>
+                <a href="#">
+                    <i class="material-icons">mic</i>
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar__icon__links">
+            <ul>
+                <li
+                    class="mob__search__btn"
+                    onclick="document.getElementById('mobSearchNav').style.display = 'block' "
+                >
+                    <a href="javascript:void(0)">
+                        <i class="material-icons">search</i>
+                    </a>
+                </li>
+                <li><a href="#"><i class = "material-icons">video_call</i></a></li>
+                <li><a href="#"><i class="material-icons">apps</i></a></li>
+                <li><a href="#"><i class="material-icons">notifications</i></a></li>
+                <li class="navbar__hero-image"><a href="#"><img src="assets/avatar.jpg" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="mob__search__nav" id="mobSearchNav">
+    <ul>
+        <li>
+            <a href="javascript:void(0)" onclick="document.getElementById('mobSearchNav').style.display = 'none' ">
+                <i class="material-icons">arrow_back</i>
+            </a>
+        </li>
+
+        <li class="navbar__search__wrapper">
+            <form action="">
+                <input type="text" value="" placeholder="Search" />
+                <button type="submit">
+                    <i class="material-icons">search</i>
+                </button>
+            </form>
+        </li>
+
+        <li><a href="#"><i class="material-icons">mic</i></a></li>
+    </ul>
+</div>
+<!-- top navbar end -->
+
+
+<div class="home__page">
+    <!-- left navbar start -->
+    <div class="left__navbar__wrapper" onclick="this.style.display = 'none' ">
+        <div class="left__navbar">
+    
+            <section class="left__navbar__list-lg">
+                <div class="left__navbar__list-lg__div">
+                    <a href="#"><i class="material-icons">home</i> <span>Home</span></a>
+                    <a href="#"><i class="material-icons">explore</i> <span>Explore</span></a>
+                    <a href="#"><i class="material-icons">subscriptions</i> <span>Subscriptions</span></a>
+                </div>
+    
+                <div class="left__navbar__list-lg__div">
+                    <a href="#"><i class="material-icons">video_library</i> <span>Library</span></a>
+                    <a href="#"><i class="material-icons">history</i> <span>History</span></a>
+                    <a href="#"><i class="material-icons">play_circle_outline</i> <span>Your Video</span></a>
+                    <a href="#"><i class="material-icons">watch_later</i> <span>Watch Later</span></a>
+                    <a href="#"><i class="material-icons">playlist_play</i> <span>Playlist name a long name of</span></a>
+                    <a href="#"><i class="material-icons">expand_more</i> <span>Show More</span></a>
+                </div>
+    
+                <div class="left__navbar__list-lg__div">
+                    <h4>Subscriptions</h4>
+                    <a href="#">
+                        <img src="assets/avatar.jpg" alt="" />
+                        <span>Channel 1</span>
+                    </a>
+                    <a href="#">
+                        <img src="assets/avatar.jpg" alt="" />
+                        <span>Channel Name 1</span>
+                    </a>
+                </div>
+    
+                <div class="left__navbar__list-lg__div">
+                    <h4>more from youtube</h4>
+                    <a href="#"><i class="material-icons">movie</i> <span>Films</span></a>
+                    <a href="#"><i class="material-icons">live_tv</i> <span>Live</span></a>
+                    <a href="#"><i class="material-icons">lightbulb_outline</i> <span>Learning</span></a>
+                </div>
+    
+                <div class="left__navbar__list-lg__footer">
+                    <a href="#">About </a>
+                    <a href="#">press </a>
+                    <a href="#">copyright </a>
+                    <a href="#">contact us </a>
+                    <a href="#">creator </a>
+                    <a href="#">advertise </a>
+                    <a href="#">developers </a>
+    
+                    <p>© 2021 Google LLC</p>
+                </div>
+            </section>
+    
+        </div>
+    </div>
+    
+    <div class="left__navbar__list-md__wrapper">
+        <section class="left__navbar__list-md">
+            <a href="#">
+                <i class="material-icons">home</i>
+                <span>Home</span>
+            </a>
+            <a href="#">
+                <i class="material-icons">explore</i>
+                <span>Explore</span>
+            </a>
+            <a href="#">
+                <i class="material-icons">subscriptions</i>
+                <span>Subscriptions</span>
+            </a>
+            <a href="#">
+                <i class="material-icons">video_library</i>
+                <span>VideoLibrary</span>
+            </a>
+        </section>
+    </div>
+    <!-- left navbar end -->
+    
+    
+    <!-- video list -->
+    <div class="home__page__video__list__wrapper">
+        <div class="home__page__video__list">
+            <ul>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-freestocksorg-34407.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-karolina-grabowska-6919956.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-karolina-grabowska-6920008.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-pixabay-221181.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-szabó-viktor-3227986.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-cottonbro-7595267.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-tima-miroshnichenko-5708719.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-pixabay-267350.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-pixabay-256219.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-designecologist-1779487.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-josh-sorenson-1714208.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-freestocksorg-34407.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-karolina-grabowska-6919956.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-karolina-grabowska-6920008.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-pixabay-221181.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-szabó-viktor-3227986.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-cottonbro-7595267.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-tima-miroshnichenko-5708719.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-pixabay-267350.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-pixabay-256219.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-designecologist-1779487.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video__list__img">
+                        <div class="img__section">
+                            <img src="assets/pexels-josh-sorenson-1714208.jpg" alt="">
+                            <span class="tag time__tag">20:35</span>
+                            <div class="hover__tag">
+                                <span class="tag"><i class="material-icons">watch_later</i></span>
+                                <span class="tag"><i class="material-icons">playlist_play</i></span>
+                            </div>
+                        </div>
+
+                        <div class="txt__section">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div>
+                                <h4 class="video__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                                <p class="channel__name">Lorem ipsum</p>
+                                <p class="video__details">
+                                    <span>316k views</span> | 
+                                    <span>1 year ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- video list end -->
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

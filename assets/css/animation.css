@@ -1,0 +1,28 @@
+@keyframes header__h1 {
+    0% {
+        opacity: 0;
+        margin-right: 100px;
+    }
+}
+@keyframes header__sort {
+    0% {
+        opacity: 0;
+        margin-left: 100px;
+    }
+}
+@keyframes header__scroll {
+    0% {
+        /* top:20%; */
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        top: 90%;
+        opacity: 0;
+    }
+}

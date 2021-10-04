@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+}
+h1 {
+    text-align: center;
+    color: #7868e6;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    color: #fff;
+}
+button#addBtn {
+    border: 1px solid #333;
+    border-left: none;
+    background-color: #7868e6;
+}
+button#addBtn:hover {
+    background-color: #7eca9c;
+}
+button#delBtn {
+    background-color: #ff9a8c;
+}
+button#delBtn:hover {
+    background-color: #eb2f06;
+}
+
+button#editBtn {background-color: #0a3d62;}
+button#editBtn:hover {
+    background-color: #2ec1ac;
+}
+
+.todo__app {
+    max-width: 526px;
+    margin: 45px auto;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.todo__form {
+    margin-bottom: 15px;
+    display: flex;
+}
+.todo__form > input {
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid #333;
+    border-right: none;
+    outline: none;
+}
+.todo__form > button {
+    padding: 8px 16px;
+}
+
+#todoListData {
+    width: 100%;
+    list-style: none;
+}
+#todoListData > li {
+    width: 100%;
+    margin-bottom: 8px;
+    color: #fff;display: flex;
+    justify-content: space-between;
+}
+#todoListData > li:nth-child(odd) {
+    background-color: #7868e6;
+}
+#todoListData > li:nth-child(even) {
+    background-color: #7eca9c;
+}
+#todoListData > li > p {padding: 8px 16px;text-transform: capitalize;}
+#todoListData > li > div > button {
+    padding: 8px 16px;
+    height: 100%;
+    margin-right: 5px;
+}
