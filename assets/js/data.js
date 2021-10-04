@@ -28,28 +28,28 @@ const projectGallery = [
         name: "To Do With LocalStorage",
         image: "todo.png",
         tags: ['HTML', 'CSS', 'JS', 'localstorage'],
-        gitUrl: "#",
+        gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/todo",
         projectUrl: "/portfolio/todo",
         gradient: 'first'
     }, {
         name: "Quiz App",
         image: "quiz.png",
         tags: ['HTML', 'CSS', 'JS'],
-        gitUrl: "",
+        gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/quiz__app",
         projectUrl: "/portfolio/quiz__app",
         gradient: 'second'
     }, {
         name: "Movie App",
         image: "/movie__app.png",
         tags: ['HTML', 'CSS', 'JS', 'API'],
-        gitUrl: "#",
+        gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/movie__app",
         projectUrl: "/portfolio/movie__url",
         gradient: 'third'
     }, {
         name: "Youtube Home UI",
         image: "/youtube_ui.png",
         tags: ['HTML', 'CSS', 'JS', 'API'],
-        gitUrl: "#",
+        gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/youtube_home",
         projectUrl: "/portfolio/youtube_home",
         gradient: 'fourth'
     }, {
