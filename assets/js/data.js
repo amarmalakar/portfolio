@@ -10,8 +10,8 @@ const projects = [
         name: "Music App",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, sit odit veritatis quas voluptatem, harum asperiores quos repellat cumque aperiam deleniti, illo aspernatur a maiores. Asperiores consequuntur illum impedit velit.",
         image: "music_app.png",
-        gitUrl: "https://github.com/amarmalakar/sass_project",
-        projectUrl: "https://sass-project-coral.vercel.app/",
+        gitUrl: "https://github.com/amarmalakar/js__music__app",
+        projectUrl: "https://amarmalakar.github.io/js__music__app/",
         tags: ['HTML', 'CSS', 'JAVASCRIPT', 'AOS']
     }, {
         name: "Google Keep",
