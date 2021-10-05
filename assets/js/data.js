@@ -29,28 +29,28 @@ const projectGallery = [
         image: "todo.png",
         tags: ['HTML', 'CSS', 'JS', 'localstorage'],
         gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/todo",
-        projectUrl: "/portfolio/todo",
+        projectUrl: "/todo",
         gradient: 'first'
     }, {
         name: "Quiz App",
         image: "quiz.png",
         tags: ['HTML', 'CSS', 'JS'],
         gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/quiz__app",
-        projectUrl: "/portfolio/quiz__app",
+        projectUrl: "/quiz__app",
         gradient: 'second'
     }, {
         name: "Movie App",
         image: "/movie__app.png",
         tags: ['HTML', 'CSS', 'JS', 'API'],
         gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/movie__app",
-        projectUrl: "/portfolio/movie__app",
+        projectUrl: "/movie__app",
         gradient: 'third'
     }, {
         name: "Youtube Home UI",
         image: "/youtube_ui.png",
         tags: ['HTML', 'CSS', 'JS', 'API'],
         gitUrl: "https://github.com/amarmalakar/portfolio/tree/main/youtube_home",
-        projectUrl: "/portfolio/youtube_home",
+        projectUrl: "/youtube_home",
         gradient: 'fourth'
     }, {
         name: "Blog App (UI)",
@@ -64,13 +64,13 @@ const projectGallery = [
 const projectLink = [
     {
         txt: "Ambulance Registration Form",
-        url: "/portfolio/form/ambulance.html"
+        url: "/form/ambulance.html"
     }, {
         txt: "Subscribe Form",
-        url: "/portfolio/form/NewsLetter.html"
+        url: "/form/NewsLetter.html"
     }, {
         txt: "Category Page Layout",
-        url: "/portfolio/category_page"
+        url: "/category_page"
     }
 ]
 
