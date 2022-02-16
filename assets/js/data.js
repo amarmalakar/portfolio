@@ -10,8 +10,8 @@ const projects = [
         name: "eKart",
         text: "This app has authentication (login, signup) feature, and the main work of this app is to handdle user cart and wishlist data with firebase. Here Redux is used to handle the state of web app.",
         image: "eKart--app.png",
-        gitUrl: "https://github.com/amarmalakar/CryptoApp",
-        projectUrl: "https://cryptoo-app.herokuapp.com",
+        gitUrl: "https://github.com/amarmalakar/ekart",
+        projectUrl: "https://ekartapp.herokuapp.com/",
         tags: ['ReactJs', 'SASS', 'APIs', 'Redux', 'Firebase']
     }, {
         name: "Uber Home Page (UI)",
