@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar Kumar</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+    <link rel="stylesheet" href="./assets/css/gradient.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav id="navbar">
+    <div class="container m-auto nav__container">
+        <div class="nav__brand">
+            <a href="#header">Amar</a>
+        </div>
+        <div class="uls" id="sideNav">
+            <button class="nav__close--btn" onclick="closeSideNav()"><i class="bi bi-x"></i>
+            </button>
+
+            <ul class="nav__links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Edu Journey</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="./Amar Kumar.pdf" download>Download CV</a></li>
+            </ul>
+            <ul class="nav__social">
+                <li><a href="https://twitter.com/theamar_malakar" target="_blank"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/amar-malakar/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                <li><a href="https://github.com/amarmalakar" target="_blank"><i class="bi bi-github"></i></a></li>
+            </ul>
+        </div>
+        <div class="nav__icon">
+            <button onclick="openSideNav()"><i class="bi bi-list"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header id="header">
+    <div>
+        <h1>Amar Kumar</h1>
+        <p class="sort">JAVASCRIPT DEVELOPER</p>
+        <img src="./assets/images/svgs/icons8-3ds-max.svg" data-speed="8" class="header__img">
+        <img src="./assets/images/svgs/icons8-3ds-max-rev.svg" data-speed="4" class="header__img">
+    </div>
+    <a class="header__next" href="#about">
+        <div class="header__next--down"></div>
+    </a>
+</header>
+
+<!-- About Section -->
+<div class="intro__banner" id="about" style="background-image: url(./assets/images/adam-solomon-WHUDOzd5IYU-unsplash.jpg);">
+    <div class="intro__banner--overlay">
+        <div class="intro__banner--heading"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-out"
+        >About</div>
+    </div>
+</div>
+<div class="container m-auto p-32-16">
+    <div class="about p-32-16">
+        <div class="portfolio__img--wrapper">
+            <div class="portfolio__img--box">
+                <div class="portfolio__img--bg" data-aos="zoom-in-left">
+                    <img src="./assets/images/22.png" alt="" class="portfolio__img">
+                </div>
+            </div>
+        </div>
+
+        <div class="about--text">
+            <p class="lg">Hello! I am <span>Amar Kumar</span> and I enjoy creating things that live on the internet. My interest in web development.</p>
+            <p>I am specializing in building interactive websites that run across platforms & devices.</p>
+
+            <div data-aos="slide-up">
+                <h4>Here are a few technologies I’ve been working with:</h4>
+                <ul class="about__list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SASS/SCSS</li>
+                    <li>Material UI</li>
+                    <li>Tailwind, Bootstrap, etc</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>ReactJs</li>
+                    <li>NextJs</li>
+                    <li>ExpressJs</li>
+                    <li>PHP</li>
+                    <li>Wordpress</li>
+                    <li>Basic Figma</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Educations -->
+<div class="intro__banner" id="education" style="background-image: url(./assets/images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg);">
+    <div class="intro__banner--overlay">
+        <div class="intro__banner--heading"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-out"
+        >Education</div>
+    </div>
+</div>
+<div class="container-xs education--section p-15" id="">
+    <div class="pencil" data-aos="flip-up">
+        <div class="pencil__rub">
+            <div class="pencil__rub--eraser"></div>
+            <div class="pencil__rub--body"></div>
+        </div>
+        <div class="pencil__body">
+            <div class="pencil__body--divider-1"></div>
+            <div class="pencil__body--divider-2"></div>
+        </div>
+        <div class="pencil__nid">
+            <div class="pencil__nid--wood"></div>
+        </div>
+    </div>
+
+    <div class="edu__list">
+        <ul class="edu__list--card"></ul>
+    </div>
+</div>
+
+
+<!-- Project Sections -->
+<div class="intro__banner" id="project">
+    <div class="intro__banner--overlay">
+        <div class="intro__banner--heading"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-out"
+        >Projects</div>
+    </div>
+</div>
+<div class="project__section">
+    <ul class="project__section--ul container m-auto" id="project__section__ul"></ul>
+</div>
+
+<div class="project__gallery--wrapper">
+    <div class="project__gallery m-auto p-15" style="max-width: 896px;" id="projectGallery"></div>
+</div>
+
+<div class="m-auto p-15" style="max-width: 896px;" id="projectLinks">
+    <h3>Some Others:</h3>
+</div>
+
+<footer>
+    <p>
+        <span>@Amar Kumar</span>
+        <a href="./Amar Kumar.pdf" download>Download CV</a>
+    </p>
+</footer>
+
+<!-- other stuffs -->
+<div class="full__page--img" onclick="hideFullPageImg()">
+    <i class="full__page--img-close bi bi-x-lg" onclick="hideFullPageImg()"></i>
+    <img src="" alt="">
+</div>
+
+
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init(
+        {
+            duration: "1000"
+        }
+    );
+</script>
+
+</body>
+</html>
